@@ -1,0 +1,21 @@
+body {
+	margin: 0px;
+	padding: 24px;
+}
+
+svg {
+	width: 500px;
+	height: 500px;
+	border: 1px solid #eee;
+}
+
+h1 {
+	font-size: 1.3em;
+	font-family: Helvetica;
+}
+
+path {
+	fill: none;
+	stroke: black;
+	stroke-width: 2px;
+}
