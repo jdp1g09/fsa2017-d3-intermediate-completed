@@ -19,7 +19,6 @@ var width, height;      // The width and height of the SVG element
 var padding;            // The padding around the edge of the SVG
 var xmax, ymax;         // Max values or x and y co-ordinates
 var xScale, yScale;     // Scales for x and y axis
-var color;              // Scale for color
 var xAxis, yAxis;       // x and y axis
 
 // Button Functions
