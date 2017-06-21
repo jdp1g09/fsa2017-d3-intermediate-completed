@@ -29,25 +29,25 @@ function addData() {    // Function defining what to do when we click the "Add D
     x: 0,
     y: 4
   });
-  update();             // Call update() to update the graph
+  refreshChart();       // Call update() to update the graph
 }
 
 function changeData() { // Function defining what to do when we click the "Change Data" button
   objArray[0] = {       // Change the first value in the Object Array
-    x: 6,
+    x: 0.6,
     y: 7
   }
-  update();             // Call update() to update the graph
+  refreshChart();       // Call update() to update the graph
 }
 
 function deleteData() { // Function defining what to do when we click the "Delete Data" button
   objArray.pop();       // Remove the last value from the Object Array
-  update();             // Call update() to update the graph
+  refreshChart();       // Call update() to update the graph
 }
 
-// Create Function
+// Create Chart Function
 
-function create() {                 // This function will only be run once on start up
+function createChart() {            // This function will only be run once on start up
   svg = d3.select('svg');           // Select the SVG element and assign it to the svg variable
   width = svg.node().clientWidth;   // Set the width to the width of the SVG element
   height = svg.node().clientHeight; // Set the height to the height of the SVG element
@@ -65,9 +65,9 @@ function create() {                 // This function will only be run once on st
     .attr('transform', 'translate(' + padding + ',' + 0 + ')'); // Transform the origin to
 }                                                               // bottom left (ignoring padding)
 
-// Update Function
+// Refresh Chart Function
 
-function update() {                       // This function will be run every time we change the data
+function refreshChart() {                 // This function will be run every time we change the data
 
   // Update the max values
 
@@ -176,11 +176,7 @@ function update() {                       // This function will be run every tim
     });                                                            // current x, y co-ordinate
 }
 
-function resize() {
-
-}
-
 // Run the Create and Update functions ONCE on page load to load the graph
 
-create();
-update();
+createChart();
+refreshChart();
